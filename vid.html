@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norway</title>
+</head>
+<style>
+  
+
+header{
+    padding: 20px;
+    text-align: center;
+    color: cornsilk;
+    font-size:25px;
+    background-color: rgb(95, 23, 51);
+    margin-top: 0px;
+    font-family:'Times New Roman', Times, serif;
+  
+}
+#vid{
+  position:fixed;
+  width: 95%;
+  right:35px;
+    height: 80%;
+    object-fit: cover;
+    z-index: -100;
+    border-radius: 10px;
+}
+.desc{
+  right:35px;
+  position:fixed;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 95%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+ }
+#myBtn {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+}
+
+</style>
+<body style="background-color: rgb(241, 191, 208);">
+    <header>
+        NORWAY
+    </header><br><br>
+    
+    <video id="vid" >
+     
+    <source src="vidNorway.mp4" type="video/mp4">
+    </video>
+    <div class="desc">
+       <h1>About Norway</h1>
+       <p>
+        Norway is a country in Northern Europe occupying the western portion 
+        of the Scandinavian Peninsula as well as the volcanic island Jan Mayen
+         and the Arctic archipelago of Svalbard. Norway borders the North Sea,
+          the North Atlantic Ocean, Finland, Sweden, and Russia. 
+          The geography of Norway is rugged with steep fjords and mountains.</p>
+        <button id="myBtn" onclick="myFunction()">Play</button>
+        
+    </div>
+    <script>
+          var video = document.getElementById("vid");
+          var btn = document.getElementById("myBtn");
+         
+          function myFunction()
+           {
+  if (video.paused)
+   {
+    video.play();
+    btn.innerHTML = "Pause";
+  }
+   else 
+  {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+  }
+  
+    </script>
+</body>
+</html>
